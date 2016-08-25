@@ -21,16 +21,19 @@ public class page {
 
          WebDriver driver = new FirefoxDriver(); 
          driver.get("https://www.makemytrip.com"); 
-         driver.findElement(By.id("roundTripTab")).click();
+         //driver.findElement(By.id("roundTripTab")).click();
          driver.findElement(By.id("login_dropOpenItem")).click();
          driver.findElement(By.id("username")).sendKeys("mahabaleshwarg@gmail.com");
          driver.findElement(By.id("password_text")).sendKeys("mableshwarg1");
          driver.findElement(By.id("login_btn")).click();
-       /*  WebElement element = driver.findElement(By.name("q"));
-         element.sendKeys("Usain Bolt!");
-         element.submit();*/
-
-         //driver.close();
+         
+         driver.findElement(By.linkText("Flights")).click();
+         
+         driver.findElement(By.linkText(" Domestic ")).click();
+         driver.findElement(By.id("one_way_button1")).click();
+         driver.findElement(By.id("from_typeahead1")).sendKeys("Bangalore, India (BLR)");
+         driver.findElement(By.id("to_typeahead1")).sendKeys("New Delhi, India (DEL))");
+         driver.findElement(By.id("start_date_sec")).click();
     }
 
 
