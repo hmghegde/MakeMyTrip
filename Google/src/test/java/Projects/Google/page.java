@@ -34,6 +34,7 @@ public class page {
          driver.findElement(By.id("from_typeahead1")).sendKeys("Bangalore, India (BLR)");
          driver.findElement(By.id("to_typeahead1")).sendKeys("New Delhi, India (DEL))");
          driver.findElement(By.id("start_date_sec")).click();
+         
     }
 
 
